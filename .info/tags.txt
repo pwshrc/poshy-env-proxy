@@ -1,0 +1,10 @@
+HTTP_PROXY
+HTTPS_PROXY
+proxy
+NoProxy
+git-proxy
+npm-proxy
+env
+Environment
+EnvironmentVariable
+pwshrc
