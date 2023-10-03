@@ -39,6 +39,7 @@ function disable-proxy {
 	    ssh-disable-proxy
     }
 }
+Export-ModuleMember -Function disable-proxy
 
 <#
 .SYNOPSIS
@@ -97,6 +98,7 @@ function enable-proxy {
 
     ssh-enable-proxy
 }
+Export-ModuleMember -Function enable-proxy
 
 
 <#
@@ -113,6 +115,8 @@ function show-proxy {
 	git-global-show-proxy
 	ssh-show-proxy
 }
+Export-ModuleMember -Function show-proxy
+
 
 <#
 .SYNOPSIS
@@ -135,6 +139,7 @@ Run 'glossary proxy' to show the available proxy functions with a short descript
 
 	pwshrc-show-proxy
 }
+Export-ModuleMember -Function proxy-help
 
 <#
 .SYNOPSIS
@@ -150,6 +155,7 @@ function pwshrc-show-proxy {
 	Write-Output ""
     Get-EnvVar -Process -NameMatch 'PWSHRC.*PROXY'
 }
+Export-ModuleMember -Function pwshrc-show-proxy
 
 <#
 .SYNOPSIS
@@ -167,6 +173,7 @@ function npm-show-proxy {
 		Write-Output "npm proxy exceptions: $(npm config get noproxy)"
     }
 }
+Export-ModuleMember -Function npm-show-proxy
 
 <#
 .SYNOPSIS
@@ -182,6 +189,7 @@ function npm-disable-proxy {
 		Write-Output "Disabled npm proxy settings"
     }
 }
+Export-ModuleMember -Function npm-disable-proxy
 
 <#
 .SYNOPSIS
@@ -211,6 +219,7 @@ function npm-enable-proxy {
 		Write-Output "Enabled npm proxy settings"
     }
 }
+Export-ModuleMember -Function npm-enable-proxy
 
 <#
 .SYNOPSIS
@@ -227,6 +236,7 @@ function git-global-show-proxy {
 		Write-Output "Git (Global) HTTPS proxy: $(git config --global --get https.proxy)"
     }
 }
+Export-ModuleMember -Function git-global-show-proxy
 
 <#
 .SYNOPSIS
@@ -241,6 +251,7 @@ function git-global-disable-proxy {
 		Write-Output "Disabled global Git proxy settings"
     }
 }
+Export-ModuleMember -Function git-global-disable-proxy
 
 <#
 .SYNOPSIS
@@ -261,6 +272,7 @@ function git-global-enable-proxy {
 		Write-Output "Enabled global Git proxy settings"
     }
 }
+Export-ModuleMember -Function git-global-enable-proxy
 
 <#
 .SYNOPSIS
@@ -276,6 +288,7 @@ function git-show-proxy {
 		Write-Output "Git HTTPS proxy: $(git config --get https.proxy)"
     }
 }
+Export-ModuleMember -Function git-show-proxy
 
 <#
 .SYNOPSIS
@@ -290,6 +303,7 @@ function git-disable-proxy {
 		Write-Output "Disabled Git project proxy settings"
     }
 }
+Export-ModuleMember -Function git-disable-proxy
 
 <#
 .SYNOPSIS
@@ -310,6 +324,7 @@ function git-enable-proxy {
 		Write-Output "Enabled Git project proxy settings"
     }
 }
+Export-ModuleMember -Function git-enable-proxy
 
 <#
 .SYNOPSIS
@@ -354,6 +369,7 @@ function ssh-show-proxy {
         } | Format-Table -AutoSize
     }
 }
+Export-ModuleMember -Function ssh-show-proxy
 
 <#
 .SYNOPSIS
@@ -375,6 +391,7 @@ function ssh-disable-proxy {
 		Write-Output "Disabled SSH config proxy settings"
     }
 }
+Export-ModuleMember -Function ssh-disable-proxy
 
 <#
 .SYNOPSIS
@@ -396,5 +413,4 @@ function ssh-enable-proxy {
 		Write-Output "Enabled SSH config proxy settings"
     }
 }
-
-Export-ModuleMember -Function *
+Export-ModuleMember -Function ssh-enable-proxy
