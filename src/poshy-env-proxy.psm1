@@ -1,3 +1,9 @@
+#!/usr/bin/env pwsh
+$ErrorActionPreference = "Stop"
+#Requires -Modules @{ ModuleName = "poshy-env-var"; RequiredVersion = "0.5.25" }
+#Requires -Modules @{ ModuleName = "poshy-lucidity"; RequiredVersion = "0.4.1" }
+
+
 <#
 .SYNOPSIS
     Disables proxy settings for Bash, npm, Git, and SSH.
